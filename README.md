@@ -1,3 +1,4 @@
+*Author: Nisha Rajput*
 # AI-First CRM — HCP "Log Interaction" Module
 
 An AI-first Customer Relationship Management (CRM) module for pharmaceutical /
