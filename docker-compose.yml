@@ -1,0 +1,19 @@
+# Optional Postgres for the HCP CRM backend.
+# Start with:  docker compose up -d
+# Then set in backend/.env:
+#   DATABASE_URL=postgresql+psycopg2://crm_user:crm_pass@localhost:5432/hcp_crm
+services:
+  db:
+    image: postgres:16
+    container_name: hcp_crm_db
+    environment:
+      POSTGRES_USER: crm_user
+      POSTGRES_PASSWORD: crm_pass
+      POSTGRES_DB: hcp_crm
+    ports:
+      - "5432:5432"
+    volumes:
+      - hcp_crm_pgdata:/var/lib/postgresql/data
+
+volumes:
+  hcp_crm_pgdata:
